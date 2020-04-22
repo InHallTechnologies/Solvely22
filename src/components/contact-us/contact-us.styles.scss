@@ -1,0 +1,118 @@
+.contact-us {
+    margin-top: 2%;
+    background-color: #01b3ec;
+    padding-left: 5%;
+    padding-right: 5%;
+    padding-bottom: 50px;
+    color: white;
+    
+    .section-title {
+        text-align: center;
+        font-size: 2.5rem;
+        color: white;
+        padding-top: 2%;
+    }
+
+    .section-content {
+        display: flex;
+        justify-content: space-evenly;
+
+        .text-and-social {
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+            width: 30%;
+            .office-address {
+                font-size: 1.5em;
+                padding: 0.3em;
+            }
+
+            .social-links {
+                display: flex;
+                
+                padding: 0.3em;
+                justify-content: center;
+                margin-top: 0.6em;
+                .social-icon {
+                    font-size: 2em;
+                    text-decoration: none;
+                    color: white;
+                    padding: 0.8em;
+                    
+                }
+            }
+        }
+
+        .partition {
+            width: 1px;
+            color: pink;
+            background-color: pink;
+        }
+
+        .contact-us-form {
+            display: flex;
+            flex-direction: column;
+            width: 30%;
+            justify-content: space-evenly;
+            
+            .input {
+                width: 100%;
+                padding: 0.5rem;
+                border-radius: 5px;
+                border: none;
+                white-space: initial;
+            }
+
+            .message {
+                border-radius: 5px;
+                height: 5rem;
+                margin-top: 3%;
+                
+                     
+            }
+
+            .submt-button {
+                padding: 1em 3.5em 1em 3.5em;
+                margin: 3% auto;
+                border-radius:5px;
+                border: none;
+
+                color: white;
+                background-color: #e2ab3e;
+            }
+        }
+    }
+
+    .footer-notes {
+        text-align: center;
+        margin-top: 3%;
+    }
+}
+
+@media(max-width:1090px) {
+    .contact-us {
+        .section-content{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            
+            .text-and-social {
+                width: 80%;
+                margin: 5% auto;
+                text-align: center;
+                order: 1;
+                .social-links {
+                    width: 40%;
+                    margin: 0 auto;
+                    margin-top: 2%;
+                }
+            }
+
+            .contact-us-form {
+                width: 60%;
+                margin: 0 auto;
+                order: 0;
+            }
+        }  
+    }
+}

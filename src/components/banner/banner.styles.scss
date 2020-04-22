@@ -1,0 +1,55 @@
+.banner {
+    display: flex;
+    justify-content: space-evenly;
+    font-family: 'Didact Gothic', sans-serif;
+    align-items:center;
+    margin: 3% auto 2%;
+    padding: 0 7%;
+
+    .banner-text-box {
+        display: flex;
+        flex-direction: column;
+        justify-content: end;
+        width: 50%;
+        user-select: none;
+        .headline {
+            font-size: 3.5rem;
+            color: #010101;
+
+            .brown{
+                color: #e2ab3e;
+            }
+
+            .blue{
+                color: #01b3ec;
+            }
+        }
+
+        .tagline {
+            font-size: 1.8rem;
+            margin-bottom: 6%;
+        }
+    }
+
+    .illustration {
+       object-fit: contain;
+       width: 50%;
+    }
+}
+
+@media(max-width:1090px) {
+    .banner {
+        flex-direction: column;
+        margin: 5% ;
+    
+        .banner-text-box {
+            width: 100%;
+        }
+    
+        .illustration {
+           margin-top: 5%;
+           width: 100%;
+           
+        }
+    }
+}

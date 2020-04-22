@@ -1,0 +1,48 @@
+.work-partner {
+    width: 90%;
+    display: flex;
+    justify-content: space-evenly;
+    .partner-logo {
+        width: 120px;
+        height: 120px;
+        object-fit: cover;
+        border-radius: 1000px;
+        box-shadow: 10px 10px 5px 2px #cccccc;
+    }
+
+    .partner-detail {
+        margin-left: 3%;
+
+        .partner-name {
+            display: block;
+            font-weight: bold;
+            font-size: large;
+        }
+
+        .founders-name {
+            display: block;
+            margin-top: 3px;
+        }
+
+        .partner-view {
+            display: block;
+            text-align: justify;
+            margin-top: 10px;
+            font-size: 0.9rem;
+        }
+    }
+}
+
+@media(max-width:1090px) {
+    .work-partner {
+        flex-direction: column;
+        margin: 0 auto;
+        box-shadow: 5px 5px 5px  #f1f1f1;
+        padding: 1em;
+        border-radius: 10px;
+        .partner-logo {
+            margin: 1% auto 5%;
+
+        }
+    }
+}

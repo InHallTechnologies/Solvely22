@@ -1,0 +1,45 @@
+.our-work {
+    padding-top: 0.5%;
+    padding-left: 5%;
+    padding-right: 5%;
+    padding-bottom: 50px;
+    background-image: url('../../assets/undraw_connected_world_wuay.svg');
+    background-repeat: no-repeat;
+    background-position-y: 25%;
+    background-position-x: center;
+    scale: 100px;
+    background-color: #eceff4;
+    user-select: none;
+    
+
+    .section-title {
+        text-align: center;
+        font-size: 2.5rem;
+
+
+        .brown{
+            color: #e2ab3e;
+        }
+
+        .blue{
+            color: #01b3ec;
+        }
+        
+    }
+
+    .work-directory {
+        display: flex;
+        justify-content: space-evenly;
+    }  
+}
+
+
+@media(max-width:1090px) {
+    .our-work{
+        .work-directory {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }  
+    }
+}
