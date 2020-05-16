@@ -14,8 +14,10 @@ const ContactUs = props => {
 
                     <div className='social-links'>
                         <a href="#" className="social-icon fa fa-facebook"></a>
-                        <a href="#" className="social-icon fa fa-twitter"></a>
+                        <a href="https://twitter.com/Solvely221" target='_blank' className="social-icon fa fa-twitter"></a>
                         <a href="#" className="social-icon fa fa-linkedin"></a>
+                        <a href="mailto:info@solvely22.com" className="social-icon fa fa-envelope" aria-hidden="true"></a>
+
                     </div>
                 </div>
 

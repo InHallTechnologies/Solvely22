@@ -1,7 +1,7 @@
 import React from 'react'
 import './banner.styles.scss'
 
-import illustration from '../../assets/2911196-removebg-preview.png'
+import illustration from '../../assets/idea.png'
 
 const Banner = (props) => {
     
@@ -11,7 +11,7 @@ const Banner = (props) => {
             <div className='banner-text-box'>
                 <h1 className='headline'>We develop <span className='brown'>solutions</span> for your <span className='blue'>growth</span></h1>
 
-                <span className='tagline'>We help you to grow by providing devoted platforms to deal with problems encountered in the ever-changing world. </span>
+                <span className='tagline'>We help you to grow by providing <span className='brown'>simple</span>, <span className='blue'>affordable</span>, and <span className='brown'>devoted</span> platforms to deal with problems encountered in the ever-changing world. </span>
             </div>
 
             <img className='illustration' src={illustration} alt='illustration' />

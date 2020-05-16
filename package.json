@@ -2,6 +2,7 @@
   "name": "solvely-22",
   "version": "0.1.0",
   "private": true,
+  "homepage": "http://solvely22.com",
   "engines": {
     "node": "12.16.2",
     "npm": "6.14.4"

@@ -1,27 +1,27 @@
 
 import LOKESH from '../../assets/lokesh.jpg';
 import SALIL from '../../assets/salil.jpg'
-import INHALL from '../../assets/inhall.png'
+import RISHABH from '../../assets/rishabh.png'
 const TEAM_MEMBERS = [
     {
-        name:'Lokesh Shrivastava',
-        views:"The idea about the company and its subsidiaries came and will be coming out of pain point general issues happening around us. The vision of our company is to provide a managed platform for multiple issues with innovative and growth solutions.",
+        name:'Lokesh Srivastava',
+        views:"Solvely.22 wants to solve pain points faced by customers around us in everyday life. The vision of the company is to create go-to solutions backed up with the best customer service.",
         imageUrl:LOKESH,
-        position:'Director and CEO Solvely.22'
+        position:'Director and Founder, Solvely.22'
     },
     {
         name:'Salil Kumar',
-        views:"Solvely.22 has one simple goal - we want to provide our users with a simple & easy to use solutions for multi-fold market problems. Whether you are tech-savvy or not, we'll create a solution that's the best fit for you. Leave the innovation to us.",
+        views:"Solvely.22 has one simple goal - we want to provide our users with simple & easy to use solutions for multi-fold market problems. Whether you are tech-savvy or not, we'll create a solution that's the best fit for you. Leave the innovation to us.",
         imageUrl:SALIL,
-        position:'Director and CEO Solvely.22'
-    }
+        position:'Director and Founder, Solvely.22'
+    },
     // },
-    // {
-    //     name:'InHall Technologies',
-    //     views:"With Solvely.22, we aim to provide innovative technology as a solution for businesses to attain growth and solve even the most trivial problems in the market. We personalize the most sophisticated solutions for your business to grow by making the best out of technology.",
-    //     imageUrl:INHALL,
-    //     position:'CTO Solvely.22'
-    // }
+    {
+        name:'Rishabh Verma',
+        views:"Solvely.22 is a solution-oriented platform which utilizes modern technology to provide end to end support to customers from vivid backgrounds. We cater to your needs with solutions that fit best.",
+        imageUrl:RISHABH,
+        position:'CTO, Solvely.22'
+    }
 ];
 
 export default TEAM_MEMBERS;

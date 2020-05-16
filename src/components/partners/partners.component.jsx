@@ -8,7 +8,7 @@ import WorkPartner from '../work-partners.component/work-partner.component';
 const Partner = props => {
     return(
         <div className = 'partners-directory' ref={props.theref}>
-            <h3 className='section-title'>Partners</h3>
+            <h3 className='section-title'><span className='brown'>Official</span> <span className='blue'>Partners</span></h3>
 
             <div className='partners-content'>
                 <img className='partners-illustration' alt='partners-illustration' src={illustration} />

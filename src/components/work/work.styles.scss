@@ -4,31 +4,23 @@
     width: 30%;
     height: 300px;
     margin: 2%;
-    padding: 0 2% 0;
+    padding: 1.5%;
     background-color: white;
     opacity: 0.9;
-
-
+    display: flex;
+    flex-direction: column;
     
-    .title-section {
-        display: flex;
-        width: 100%;
-        justify-content: space-between;
-        
-        .work-title{
-            font-size: 2.0rem;
-            font-weight: 400;
-        }
-
-        .work-icon {
-            width: 85px;
-            object-fit: contain;
-            padding: 1.5em 1em 1.5em 0;
-        }
+    
+    .work-icon {
+        width: 85px;
+        object-fit: contain; 
     }
 
     .work-description {
+        display: block;
+        text-align: justify;
         font-size: 1.1rem;
+        margin-top: 2.5%;
     }
 
 
@@ -48,17 +40,10 @@
         padding: 0 3% 0;
         margin: 2% auto 2% auto;
         opacity: 0.93;
-        .title-section {
-            
-
-            .work-title{
-                margin-left: 2%;
-            }
-    
-            .work-icon {
-               margin-right: 2%;
-            }
-        }
+        .work-icon {
+           margin-top: 5%;
+           margin-left: 2%;
+         }
     
         .work-description {
             margin-left: 2%;
