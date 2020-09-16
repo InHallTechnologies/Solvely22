@@ -1,69 +1,65 @@
 .team-member {
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
 
-    .member-photo {
-        width: 120px;
-        height: 120px;
-        object-fit: cover;
-        border-radius: 1000px;
-        box-shadow: 10px 10px 5px 2px #cccccc;
-        
+  .member-photo {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 1000px;
+    box-shadow: 10px 10px 5px 2px #cccccc;
+  }
+
+  .member-details {
+    margin-left: 3%;
+    user-select: none;
+
+    .member-name {
+      margin: 0;
     }
 
-    .member-details{
-        margin-left: 3%;
-        user-select: none;
+    .member-position {
+      display: block;
+      padding: 0;
+      margin: 0 0 3px 0px;
+    }
 
-        .member-name {
-           margin: 0;
-        }
-
-        .member-position {
-            display: block;
-            padding: 0;
-            margin: 0 0 3px 0px;
-        }
-
-        .member-views {
-            display: block;
-            margin-top: 4px;
-            font-size: 0.9rem;
-        }
-    }   
+    .member-views {
+      display: block;
+      margin-top: 4px;
+      font-size: 0.9rem;
+    }
+  }
 }
 
-@media(max-width:1090px) {
-    .team-member {
-        flex-direction: column;
-        margin-top: 10%;
-        box-shadow: 5px 5px 5px  #f1f1f1;
-        border-radius: 10px;
-        padding: 1em;
-        max-width: 70%;
-        margin: 0 auto;
+@media (max-width: 1090px) {
+  .team-member {
+    flex-direction: column;
+    margin-top: 10%;
+    box-shadow: 5px 5px 5px #f1f1f1;
+    border-radius: 10px;
+    padding: 1em;
+    max-width: 70%;
+    margin: 0 auto;
 
-        .member-photo {
-            width: 110px;
-            height: 110px;
-            object-fit: contain;
-            border-radius: 100px;
-            box-shadow: 5px 5px 5px 2px #cccccc;
-            
-        }
-    
-        .member-details {
-
-            .member-name {
-                margin-top: 0.5em;
-             }
-
-            .member-views {
-                display: block;
-                margin-top: 1em;
-                font-size: 0.9rem;
-            }
-        }
+    .member-photo {
+      width: 110px;
+      height: 110px;
+      object-fit: cover;
+      border-radius: 100px;
+      box-shadow: 5px 5px 5px 2px #cccccc;
     }
 
+    .member-details {
+      .member-name {
+        margin-top: 0.5em;
+      }
+
+      .member-views {
+        display: block;
+        margin-top: 1em;
+        font-size: 0.9rem;
+      }
+    }
+  }
 }

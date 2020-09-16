@@ -1,38 +1,103 @@
-import React from 'react'
+import React from "react";
 
-import './contact-us.styles.scss'
+import "./contact-us.styles.scss";
+import { database } from "../../firebaseHandlers/firebaseHanlers";
 
-const ContactUs = props => {
-    return(
-        <div className='contact-us' ref={props.theref}>
-            <h2 className='section-title'><span className='brown'>Contact</span> <span className='blue'>Us</span></h2>
-            <div className='section-content'>
-                <div className='text-and-social'>
-                     <span className='office-address'>Solvely.22 Pvt. Ltd.</span>
-                     <span className='office-address'>E802, Goyalco Orchid Lakeview Apartments,</span>
-                     <span className='office-address'>Bellandur, Bengaluru - 560103</span>
+class ContactUs extends React.Component {
+  constructor(props) {
+    super();
+    const key = database.ref("ALL_REQUESTS").push().key;
+    this.state = {
+      key: key,
+      phoneNumber: "",
+      message: "",
+    };
+  }
 
-                    <div className='social-links'>
-                        <a href="#" className="social-icon fa fa-facebook"></a>
-                        <a href="https://twitter.com/Solvely221" target='_blank' className="social-icon fa fa-twitter"></a>
-                        <a href="#" className="social-icon fa fa-linkedin"></a>
-                        <a href="mailto:info@solvely22.com" className="social-icon fa fa-envelope" aria-hidden="true"></a>
+  handleSubmit = async (event) => {
+    event.preventDefault();
 
-                    </div>
-                </div>
+    await database.ref("ALL_REQUESTS").child(this.state.key).set(this.state);
+    alert("Thank you for your request. Our Team will contact you soon");
+    const key = database.ref("ALL_REQUESTS").push().key;
+    this.setState({
+      key: key,
+      phoneNumber: "",
+      message: "",
+    });
+  };
 
-                <form className='contact-us-form'>
-                    <input className='input' name='phone-number' placeholder='Enter your phone nunber...' required  type="tel"/>
-                    <input className='input message' name='text-message' placeholder='Enter your message...'  type="text"/>
-                    <input className='submt-button' type='submit' value='SUBMIT'/>
-                </form>
+  handleChange = (event) => {
+    const { value, name } = event.target;
+    this.setState({
+      [name]: value,
+    });
 
+    console.log(value, name);
+  };
+
+  render() {
+    return (
+      <div className="contact-us" ref={this.props.theref}>
+        <h2 className="section-title">
+          <span className="brown">Contact</span>{" "}
+          <span className="blue">Us</span>
+        </h2>
+        <div className="section-content">
+          <div className="text-and-social">
+            <span className="office-address">Solvely.22 Pvt. Ltd.</span>
+            <span className="office-address">
+              E802, Goyalco Orchid Lakeview Apartments,
+            </span>
+            <span className="office-address">
+              Bellandur, Bengaluru - 560103
+            </span>
+
+            <div className="social-links">
+              <a href="#" className="social-icon fa fa-facebook"></a>
+              <a
+                href="https://twitter.com/Solvely221"
+                target="_blank"
+                className="social-icon fa fa-twitter"
+              ></a>
+              <a href="#" className="social-icon fa fa-linkedin"></a>
+              <a
+                href="mailto:info@solvely22.com"
+                className="social-icon fa fa-envelope"
+                aria-hidden="true"
+              ></a>
             </div>
+          </div>
 
-            <footer className='footer-notes'>&copy; Copyright 2020 InHall Technolgies Private Limited. All rights reserved.</footer>
-
+          <form className="contact-us-form" onSubmit={this.handleSubmit}>
+            <input
+              className="input"
+              name="phoneNumber"
+              placeholder="Enter your phone number..."
+              required
+              type="tel"
+              onChange={this.handleChange}
+              value={this.state.phoneNumber}
+            />
+            <input
+              className="input message"
+              name="message"
+              placeholder="Enter your message..."
+              type="text"
+              onChange={this.handleChange}
+              value={this.state.message}
+            />
+            <input className="submt-button" type="submit" value="SUBMIT" />
+          </form>
         </div>
-    )
+
+        <footer className="footer-notes">
+          &copy; Copyright 2020 InHall Technolgies Private Limited. All rights
+          reserved.
+        </footer>
+      </div>
+    );
+  }
 }
 
 export default ContactUs;
