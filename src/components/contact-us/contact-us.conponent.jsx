@@ -92,7 +92,7 @@ class ContactUs extends React.Component {
         </div>
 
         <footer className="footer-notes">
-          &copy; Copyright 2020 InHall Technolgies Private Limited. All rights
+          &copy; Copyright 2021 Solvely.22 Private Limited. All rights
           reserved.
         </footer>
       </div>
