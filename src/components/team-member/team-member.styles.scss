@@ -1,9 +1,10 @@
 .team-member {
   display: flex;
   align-items: center;
+  margin-top: 20px;
 
   .member-photo {
-    width: 120px;
+    min-width: 120px;
     height: 120px;
     object-fit: cover;
     border-radius: 1000px;

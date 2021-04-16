@@ -14,8 +14,8 @@ class Header extends React.Component {
       sidebarVisiblity: false,
     };
 
-    // this.menuItems = ["HOME", "OUR WORK", "TEAM", "ABOUT US", "WORK WITH US"];
-    this.menuItems = ["HOME", "TEAM", "ABOUT US", "WORK WITH US"];
+    // this.menuItems = ["HOME", "OUR WORK", "TEAM", "ABOUT US", "CONTACT US"];
+    this.menuItems = ["HOME", "TEAM", "ABOUT US", "CONTACT US"];
   }
 
   toggleSidebar = () => {
@@ -40,7 +40,7 @@ class Header extends React.Component {
           this.props.allRef.ourwork.current.scrollIntoView({behavior: 'smooth'})
           break;
 
-      case "WORK WITH US":
+      case "CONTACT US":
         this.props.allRef.contactus.current.scrollIntoView({
           behavior: "smooth",
         });
@@ -90,7 +90,7 @@ class Header extends React.Component {
               handleClick={this.handleClick}
               key={this.menuItems[index]}
               styles={
-                item === "WORK WITH US"
+                item === "CONTACT US"
                   ? "navigation-option work-with-us"
                   : "navigation-option"
               }

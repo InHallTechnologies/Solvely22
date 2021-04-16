@@ -5,7 +5,7 @@ const TEAM_MEMBERS = [
   {
     name: "Lokesh Srivastava",
     views:
-      "Solvely.22 wants to solve pain points faced by customers around us in everyday life. The vision of the company is to create go-to solutions backed up with the best customer service.",
+      "At Solvely.22, we aim to identify and solve customer pain points by creating cutting edge solutions backed by top notch customer support.",
     imageUrl: LOKESH,
     position: "Director and Founder, Solvely.22",
   },

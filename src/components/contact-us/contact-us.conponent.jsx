@@ -2,6 +2,7 @@ import React from "react";
 
 import "./contact-us.styles.scss";
 import { database } from "../../firebaseHandlers/firebaseHanlers";
+import { Snackbar } from '@material-ui/core'
 
 class ContactUs extends React.Component {
   constructor(props) {
@@ -11,6 +12,7 @@ class ContactUs extends React.Component {
       key: key,
       phoneNumber: "",
       message: "",
+      alertMessage:'',
     };
   }
 
@@ -18,13 +20,23 @@ class ContactUs extends React.Component {
     event.preventDefault();
 
     await database.ref("ALL_REQUESTS").child(this.state.key).set(this.state);
-    alert("Thank you for your request. Our Team will contact you soon");
+    // alert("Thank you for your request. Our Team will contact you soon");
     const key = database.ref("ALL_REQUESTS").push().key;
     this.setState({
       key: key,
       phoneNumber: "",
       message: "",
+      alertMessage:'Thank you. We have received your message and we will reach out to you within 48 Hrs'
     });
+
+    setTimeout(() => {
+      this.setState({
+        key: key,
+        phoneNumber: "",
+        message: "",
+        alertMessage:""
+      });
+    },3000)
   };
 
   handleChange = (event) => {
@@ -54,13 +66,7 @@ class ContactUs extends React.Component {
             </span>
 
             <div className="social-links">
-              <a href="#" className="social-icon fa fa-facebook"></a>
-              <a
-                href="https://twitter.com/Solvely221"
-                target="_blank"
-                className="social-icon fa fa-twitter"
-              ></a>
-              <a href="#" className="social-icon fa fa-linkedin"></a>
+              <a href="https://www.linkedin.com/company/solvely22" className="social-icon fa fa-linkedin"></a>
               <a
                 href="mailto:info@solvely22.com"
                 className="social-icon fa fa-envelope"
@@ -79,7 +85,7 @@ class ContactUs extends React.Component {
               onChange={this.handleChange}
               value={this.state.phoneNumber}
             />
-            <input
+            <textarea
               className="input message"
               name="message"
               placeholder="Enter your message..."
@@ -95,6 +101,7 @@ class ContactUs extends React.Component {
           &copy; Copyright 2021 Solvely.22 Private Limited. All rights
           reserved.
         </footer>
+        <Snackbar open={this.state.alertMessage?true:false} message={this.state.alertMessage} />
       </div>
     );
   }
