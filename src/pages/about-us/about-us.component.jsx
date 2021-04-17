@@ -33,7 +33,7 @@ class AboutUs extends React.Component {
           <img src={illustration} className="illustration" alt="nighbour" />
         </div>
 
-        <ContactUs />
+        <ContactUs/>
       </div>
     );
   }

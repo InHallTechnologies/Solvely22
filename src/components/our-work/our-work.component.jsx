@@ -1,16 +1,28 @@
-import React from "react";
+import React, { useState } from "react";
 import "./our-work.styles.scss";
 import { WORK_DETAILS } from "./work-details";
 
 import Work from "../work/work.component";
+import { Snackbar } from "@material-ui/core";
 
-const handleClick = (event) => {
-  if (event.target.id === "My Rent Space") {
-    window.open("https://www.myrent.space/", "_blank");
-  }
-};
+
 
 const OurWork = (props) => {
+
+  const [snackbar, setSnackbar] = useState(false)
+  const [message, setMessage] = useState("")
+  const handleClick = (event) => {
+
+    if (event.target.id === "My Rent Space") {
+      window.open("https://www.myrent.space/", "_blank");
+    } else if (event.target.id === "Home Umbrella") {
+        setMessage("Coming Soon")
+        setSnackbar(true)
+    } else if (event.target.id === "R2RS") {
+        setMessage("Under Development")
+        setSnackbar(true)
+    }
+  };
   return (
     <div className="our-work" ref={props.theref}>
       <h1 className="section-title">
@@ -27,6 +39,8 @@ const OurWork = (props) => {
           />
         ))}
       </div>
+
+      <Snackbar open={snackbar} onClose={() => {setSnackbar(false)}} autoHideDuration={1000} message={message} />
     </div>
   );
 };
